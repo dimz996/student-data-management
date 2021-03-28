@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::resource('Student','StudentController');
+Route::resource('StudentController ','StudentController');
 Route::get('join-table', 'StudentController@index');
+Route::get('students_data', 'StudentController@index');
+Route::get('techers_data', 'StudentController@index');
+Route::get('subs_data', 'StudentController@index');

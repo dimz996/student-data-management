@@ -1,7 +1,7 @@
 <html>
  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Joined Table</title>
+  <title>Subject Data</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -13,17 +13,16 @@
     <table class="table table-bordered table-striped">
            <thead>
             <tr>
-                <th>Student</th>
                 <th>Subject</th>
-                <th>Techer</th>
+                <th>ID</th>        
             </tr>
            </thead>
            <tbody>
            @foreach($data as $row)
             <tr>
-             <td>{{ $row->students.name }}</td>
-             <td>{{ $row->subjects.name}}</td>                
-             <td>{{ $row->techers.name}}</td>
+             <td>{{ $row-> subject.name }}</td>
+             <td>{{ $row->sub_id}}</td>                
+           
             </tr>
            @endforeach
            </tbody>

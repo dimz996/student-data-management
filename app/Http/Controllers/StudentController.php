@@ -19,6 +19,19 @@ class StudentController extends Controller
         ->select('students.name','techers.name','subjects.name')
         ->get();
         return view('join_table',compact('data'));
+
+
+        $studentsdata = DB::table -> select('students.id','students.name')
+        ->get();
+        return view('students_data',compact('studentsdata'));
+
+        $techersdata = DB::table -> select('techers.id','techers.name')
+        ->get();
+        return view('teachers_data',compact('teachersdata'));
+
+        $subsdata = DB::table -> select('subjects.id','subjects.name')
+        ->get();
+        return view('subjects_data',compact('teachersdata'));
     }
 
     /**
